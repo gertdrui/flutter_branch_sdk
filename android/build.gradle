@@ -5,6 +5,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url 'http://developer.huawei.com/repo/' }
     }
 
     dependencies {
@@ -38,4 +40,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-appindexing:19.0.0'
     implementation 'com.google.android.gms:play-services-ads-identifier:16+'
     implementation 'androidx.browser:browser:1.0.0'
+    implementation 'com.facebook.android:facebook-core:[8,9)'
+    implementation 'com.facebook.android:facebook-applinks:[8,9)'
+    implementation 'com.huawei.hms:ads-identifier:3.4.28.305'
 }

@@ -8,6 +8,7 @@ import io.flutter.BuildConfig;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.PluginRegistry;
+import com.facebook.FacebookSdk;
 
 public class FlutterBranchSdkInit {
     private static final String DEBUG_NAME = "FlutterBranchSDK";
@@ -18,6 +19,6 @@ public class FlutterBranchSdkInit {
             Branch.enableLogging();
         }
         // Branch object initialization
-        Branch.getAutoInstance(context);
+        Branch.getAutoInstance(context).enableFacebookAppLinkCheck();
     }
 }
